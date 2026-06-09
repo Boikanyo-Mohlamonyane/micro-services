@@ -56,7 +56,7 @@ public class AuthController {
     }
 
 
-    //@PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/admin/users")
     public List<User> getAll() {
         return authService.getAllUsers();
