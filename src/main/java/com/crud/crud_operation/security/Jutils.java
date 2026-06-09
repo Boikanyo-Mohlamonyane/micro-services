@@ -46,9 +46,11 @@ public class Jutils {
     }
 
     public String extractEmail(String token) {
+
         return extractClaims(token).getSubject();
     }
     public String extractRole(String token) {
+
         return extractClaims(token).get("role", String.class);
     }
 }
